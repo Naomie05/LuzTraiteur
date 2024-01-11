@@ -1,0 +1,70 @@
+.traiter--section{
+    display: flex;
+    padding: 150px 85px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 64px;
+}
+
+.traiteur--form{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    width: 50%;
+    row-gap: 32px;
+}
+
+.form--container{
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    column-gap: 32px;
+    row-gap: 32px;
+}
+
+.form--label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10.6px;
+    flex: 1 0 0;
+    width: 100%;
+}
+
+.form--input{
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1.333px solid var(--black);
+    background: var(--white);
+}
+
+.traiteur--titles h1{
+    line-height: 50px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.traiteur--titles p{
+    font-size: 20px;
+    color: black;
+}
+
+span{
+    font-size: 20px;
+    color: black;
+}
+
+input{
+    color: black;
+}
+
+@media screen  and (max-width: 1200px) {
+
+    .traiteur--form{
+        width: 100%;
+    }
+}
