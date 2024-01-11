@@ -1,0 +1,50 @@
+.category--page--container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    line-height: 65px;
+    flex-wrap: wrap;
+    margin-top: 55px;
+}
+
+.direction--links{
+    font-family: 'Akshar', sans-serif ;
+    font-size: 24px;
+}
+
+.Link{
+    text-decoration: underline;
+    color: rgb(200, 105, 105);
+}
+
+.category--page--title{
+    align-items: center;
+    width: 770px;
+    font-family: 'Akshar', sans-serif;
+}
+
+.category--title h1{
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 700;
+    font-family: 'Akshar', sans-serif;
+}
+
+.category--text p{
+    color: var(--black);
+    line-height: 25px;
+    margin-bottom: 35px;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.product--cards{
+    display: grid;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, auto);
+    text-align: center;
+    gap: 2.5rem;
+    margin-bottom: 35px;
+}
