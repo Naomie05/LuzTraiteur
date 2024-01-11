@@ -78,31 +78,31 @@ function Navbar () {
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to='Menu' className='list--content'>
+                        <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to='/Menu' className='list--content'>
                             <h3>LE MENU</h3>
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to='Traiteur' className='list--content'>
+                        <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to='/Traiteur' className='list--content'>
                             <h3>SERVICE TRAITEUR</h3>
                         </Link>
                     </li>
                     <li>
-                        <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to='About' className='list-content'>
+                        <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to='/About' className='list-content'>
                             <h3>A PROPOS</h3>
                         </Link>
                     </li>
                 </ul>
             </div> 
             <div className= 'navbar--icons'>
-                <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to='Login' className='icons--User'>
+                <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to='/Login' className='icons--User'>
                     <BsPersonCircle />
                 </Link>
                 <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to='' className='icons'>
                     <PiTote/>
                 </Link>
             </div>
-            <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to= 'Menu' className='btn btn-outline-primary'>
+            <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to= '/Menu' className='btn btn-outline-primary'>
                 <h3>COMMANDEZ</h3>
             </Link>
         </nav>

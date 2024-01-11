@@ -39,6 +39,11 @@ const categoryData = [
         image: 'https://media.istockphoto.com/id/1395736637/photo/spring-or-summer-cold-cocktail-raspberry-lemonade.jpg?s=612x612&w=0&k=20&c=Eim8oSm-ycxAVssFPrOVwWpeo6iOaoZkkglKrmbKSk4=',
         name: 'BOISSONS',
     },
+    {
+        id: 9,
+        image: 'https://media.istockphoto.com/id/536666148/photo/beef-steaks-baked-potatoes-and-vegetable-salad.jpg?s=612x612&w=0&k=20&c=zPZTYiXAOaxMKgubWYfsX0O49K-fMkIESqcPkQRYsto=',
+        name: 'VIANDES',
+    },
 
 ] 
 export default categoryData;

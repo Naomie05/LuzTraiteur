@@ -1,9 +1,6 @@
 import React from 'react';
-//import HomeSectionCard from '../../components/homeSectionCard/HomeSectionCard';
-//import ProductCard from '../../components/productCard/ProductCard';
 import Category from '../../components/categoryCard/CategoryCard';
 import categoryData from '../../components/categoryData/CategoryData';
-//import productData from '../../productsData/products';
 import { Link } from 'react-router-dom';
 
 import './Menu.css';
@@ -21,7 +18,7 @@ const Menu = () => {
       </div>
         <div className='cards--container'>
           {categoryData.map((item) =>(
-            <Link>
+            <Link to={`${item.name.toLowerCase()}`}>
               <Category key = {item.id} imageSrc={item.image} title={item.name}/>
             </Link>
           ))}
