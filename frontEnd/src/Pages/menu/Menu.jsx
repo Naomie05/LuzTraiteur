@@ -16,13 +16,13 @@ const Menu = () => {
           <h1>NOTRE MENU</h1>
         </div>
       </div>
-        <div className='cards--container'>
+      <div className='cards--container'>
           {categoryData.map((item) =>(
             <Link to={`${item.name.toLowerCase()}`}>
               <Category key = {item.id} imageSrc={item.image} title={item.name}/>
             </Link>
           ))}
-        </div>
+      </div>
     </div>
   )
 }

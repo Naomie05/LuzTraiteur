@@ -1,4 +1,5 @@
 import React from 'react';
+import  { Link } from 'react-router-dom';
 
 import './ProductCard.css';
 
@@ -21,8 +22,12 @@ const ProductCard = ({
           <span>${price}</span>
         </div>
         <div className='buttons'>
-          <button className='btn btn-primary'><h3>Ajouter</h3></button>
-          <button className='btn btn-secondary'><h3>Voir Details</h3></button>
+          <Link>
+            <button className='btn btn-primary'><h3>Ajouter</h3></button>
+          </Link>
+          <Link to={title}>
+            <button className='btn btn-secondary'><h3>Voir Details</h3></button>
+          </Link>
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@ import Login from './Pages/Login/Login';
 import Traiteur from './Pages/traiteur/Traiteur';
 import NoMatch from './components/NoMatch';
 import CategoryPage from './Pages/categoriesPage/CategoryPage';
+import FoodDetails from './Pages/foodDetails/FoodDetails';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import imageSlide from './data';
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/Login' element={<Login/>}></Route>
         <Route path='/Traiteur' element={<Traiteur/>}></Route>
         <Route path='/menu/:slug' element={<CategoryPage/>}></Route>
+        <Route path='/menu/:slug/:foodName' element={<FoodDetails/>}></Route>
         <Route path='*' element={<NoMatch/>}></Route>
       </Routes>
       <Footer/>
