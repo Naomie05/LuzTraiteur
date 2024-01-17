@@ -53,6 +53,17 @@
     font-size: 27px;
 }
 
+.my--cart{
+    display: flex;
+}
+
+.my--cart > sup{
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(178, 9, 9);
+    
+}
+
 @media only screen and (max-width: 1200px){
     .btn-outline-primary{
         display: none;

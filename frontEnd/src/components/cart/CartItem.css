@@ -1,0 +1,42 @@
+.item--infos{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.item--details{
+    display: flex;
+    padding: 15px 15px;
+    justify-content: space-between;
+    gap: 155px;
+}
+
+.price{
+    justify-content: flex-end;
+    text-align: end;
+}
+
+.cart--item--buttons--container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.add--remove--button{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.remove--link p{
+    align-items: center;
+    color: red;
+    text-decoration: underline;
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.remove--link p:hover{
+    color: rgb(101, 23, 23);
+}
+

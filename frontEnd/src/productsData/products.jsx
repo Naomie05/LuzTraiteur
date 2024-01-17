@@ -6,6 +6,7 @@ const productsData = [
         desc: 'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sed velit provident obcaecati totam ipsum nemo consequatur unde voluptas! Sit iusto officia illum nihil eum.',
         category: 'pattes',
         price: 12.29,
+        
     },
     {
         id: 2,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProductCard from '../../components/productCard/ProductCard';
 import productsData from '../../productsData/products';
 import { useParams, NavLink } from 'react-router-dom';

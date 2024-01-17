@@ -98,8 +98,11 @@ function Navbar () {
                 <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to='/Login' className='icons--User'>
                     <BsPersonCircle />
                 </Link>
-                <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to='' className='icons'>
-                    <PiTote/>
+                <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to='/Cart' className='icons'>
+                    <div className='my--cart'>
+                        <PiTote/>
+                        <sup>{'0'}</sup>
+                    </div>
                 </Link>
             </div>
             <Link onClick={closeMenu} activeClass='navbar--active-content' spy={true} smooth={true} offset={-70} duration={500} to= '/Menu' className='btn btn-outline-primary'>

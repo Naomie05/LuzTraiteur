@@ -9,7 +9,6 @@ const ProductCard = ({
   title,
   description,
   price,
-  category,
 }) => {
   return (
     <div className='card--containers'>
