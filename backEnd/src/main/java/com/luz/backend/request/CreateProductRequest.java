@@ -1,4 +1,4 @@
-package com.luz.request;
+package com.luz.backend.request;
 
 import com.luz.backend.model.ProductRequirement;
 
@@ -10,8 +10,6 @@ public class CreateProductRequest {
     private String title;
     private String description;
     private int price;
-    private int discountedPrice;
-    private int dicountPercent;
     private int calories;
     private String imageUrl;
     private List<ProductRequirement> productRequirements = new ArrayList<>();
@@ -40,22 +38,6 @@ public class CreateProductRequest {
 
     public void setPrice(int price) {
         this.price = price;
-    }
-
-    public int getDiscountedPrice() {
-        return discountedPrice;
-    }
-
-    public void setDiscountedPrice(int discountedPrice) {
-        this.discountedPrice = discountedPrice;
-    }
-
-    public int getDicountPercent() {
-        return dicountPercent;
-    }
-
-    public void setDicountPercent(int dicountPercent) {
-        this.dicountPercent = dicountPercent;
     }
 
     public int getCalories() {

@@ -1,7 +1,7 @@
-package com.luz.service;
+package com.luz.backend.service;
 
-import com.luz.model.User;
-import com.luz.repository.UserRepository;
+import com.luz.backend.model.User;
+import com.luz.backend.repository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

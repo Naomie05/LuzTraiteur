@@ -1,4 +1,4 @@
-package com.luz.model;
+package com.luz.backend.model;
 
 import jakarta.persistence.*;
 
@@ -18,10 +18,6 @@ public class Product {
     private String description;
     @Column(name = "price")
     private int price;
-    @Column(name = "discounted_price")
-    private int discountedPrice;
-    @Column(name = "discount_percent")
-    private int discountPercent;
     @Column(name = "calories")
     private int calories;
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -43,13 +39,11 @@ public class Product {
     public Product() {
     }
 
-    public Product(Long id, String title, String description, int price, int discountedPrice, int discountPercent, int calories, List<ProductRequirement> productRequirements, String imageUrl, List<Rating> ratings, List<Review> reviews, int numRatings, Category category, LocalDateTime createdAt) {
+    public Product(Long id, String title, String description, int price, int calories, List<ProductRequirement> productRequirements, String imageUrl, List<Rating> ratings, List<Review> reviews, int numRatings, Category category, LocalDateTime createdAt) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
-        this.discountedPrice = discountedPrice;
-        this.discountPercent = discountPercent;
         this.calories = calories;
         this.productRequirements = productRequirements;
         this.imageUrl = imageUrl;
@@ -90,22 +84,6 @@ public class Product {
 
     public void setPrice(int price) {
         this.price = price;
-    }
-
-    public int getDiscountedPrice() {
-        return discountedPrice;
-    }
-
-    public void setDiscountedPrice(int discountedPrice) {
-        this.discountedPrice = discountedPrice;
-    }
-
-    public int getDiscountPercent() {
-        return discountPercent;
-    }
-
-    public void setDiscountPercent(int discountPercent) {
-        this.discountPercent = discountPercent;
     }
 
     public int getCalories() {

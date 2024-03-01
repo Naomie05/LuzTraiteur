@@ -1,2 +1,4 @@
-package com.luz.backend.controller;public class HomeController {
+package com.luz.backend.controller;
+
+public class HomeController {
 }

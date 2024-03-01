@@ -1,4 +1,4 @@
-package com.luz.exception;
+package com.luz.backend.exception;
 
 public class UserException extends Exception{
 

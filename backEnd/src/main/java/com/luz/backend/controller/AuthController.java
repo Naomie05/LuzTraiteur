@@ -1,12 +1,14 @@
-package com.luz.controller;
+package com.luz.backend.controller;
 
-import com.luz.config.JwtProvider;
-import com.luz.exception.UserException;
-import com.luz.model.User;
-import com.luz.repository.UserRepository;
-import com.luz.request.LoginRequest;
-import com.luz.response.AuthResponse;
-import com.luz.service.CustomerUserServiceImplementation;
+import com.luz.backend.config.JwtProvider;
+import com.luz.backend.exception.UserException;
+import com.luz.backend.model.Cart;
+import com.luz.backend.model.User;
+import com.luz.backend.repository.UserRepository;
+import com.luz.backend.request.LoginRequest;
+import com.luz.backend.response.AuthResponse;
+import com.luz.backend.service.CartService;
+import com.luz.backend.service.CustomerUserServiceImplementation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -25,11 +27,14 @@ public class AuthController {
     private JwtProvider jwtProvider;
     private PasswordEncoder passwordEncoder;
     private CustomerUserServiceImplementation customUserService;
+    private CartService cartService;
 
-    public AuthController(UserRepository userRepository, CustomerUserServiceImplementation customUserService, PasswordEncoder passwordEncoder) {
+    public AuthController(UserRepository userRepository, CustomerUserServiceImplementation customUserService, PasswordEncoder passwordEncoder, JwtProvider jwtProvider, CartService cartService) {
         this.userRepository = userRepository;
         this.customUserService = customUserService;
         this.passwordEncoder = passwordEncoder;
+        this.jwtProvider = jwtProvider;
+        this.cartService = cartService;
     }
 
     @PostMapping("/signup")
@@ -53,12 +58,16 @@ public class AuthController {
 
         User saveUser = userRepository.save(createUser);
 
+        Cart cart = cartService.createCart(saveUser);
+
         Authentication authentication = new UsernamePasswordAuthenticationToken(saveUser.getEmail(), saveUser.getPassword());
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
         String token = jwtProvider.generateToken(authentication);
 
-        AuthResponse authResponse = new AuthResponse(token, "Inscription Réussie!");
+        AuthResponse authResponse = new AuthResponse();
+        authResponse.setJwt(token);
+        authResponse.setMessage("Inscription Reussie!!!");
 
         return new ResponseEntity<AuthResponse>(authResponse, HttpStatus.CREATED);
     }
@@ -73,7 +82,9 @@ public class AuthController {
 
         String token = jwtProvider.generateToken(authentication);
 
-        AuthResponse authResponse = new AuthResponse(token, "Connexion Réussie!");
+        AuthResponse authResponse = new AuthResponse();
+        authResponse.setJwt(token);
+        authResponse.setMessage("Connexion Reussie!!!");
 
         return new ResponseEntity<AuthResponse>(authResponse, HttpStatus.CREATED);
     }

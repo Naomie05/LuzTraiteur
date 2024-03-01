@@ -1,4 +1,4 @@
-package com.luz.request;
+package com.luz.backend.request;
 
 public class LoginRequest {
 

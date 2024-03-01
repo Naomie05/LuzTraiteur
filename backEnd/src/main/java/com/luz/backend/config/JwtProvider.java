@@ -1,4 +1,4 @@
-package com.luz.config;
+package com.luz.backend.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

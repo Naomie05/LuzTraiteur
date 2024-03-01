@@ -1,4 +1,4 @@
-package com.luz.response;
+package com.luz.backend.response;
 
 public class AuthResponse {
     private String jwt;
@@ -7,6 +7,25 @@ public class AuthResponse {
     public AuthResponse(String jwt, String message) {
         super();
         this.jwt = jwt;
+        this.message = message;
+    }
+
+    public AuthResponse() {
+    }
+
+    public String getJwt() {
+        return jwt;
+    }
+
+    public void setJwt(String jwt) {
+        this.jwt = jwt;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
         this.message = message;
     }
 }

@@ -1,4 +1,4 @@
-package com.luz.config;
+package com.luz.backend.config;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.context.annotation.Bean;

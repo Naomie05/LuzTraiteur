@@ -1,4 +1,4 @@
-package com.luz.model;
+package com.luz.backend.model;
 
 import jakarta.persistence.Column;
 

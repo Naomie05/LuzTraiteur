@@ -1,7 +1,7 @@
-package com.luz.service;
+package com.luz.backend.service;
 
-import com.luz.exception.UserException;
-import com.luz.model.User;
+import com.luz.backend.exception.UserException;
+import com.luz.backend.model.User;
 
 public interface UserService {
 

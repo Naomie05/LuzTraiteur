@@ -1,6 +1,6 @@
-package com.luz.repository;
+package com.luz.backend.repository;
 
-import com.luz.model.User;
+import com.luz.backend.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {
