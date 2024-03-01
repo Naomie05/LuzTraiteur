@@ -14,7 +14,7 @@ const specialsData = [
         title: 'Double Burgueur',
         desc: 'Lorem ipsum dolor sit amet.',
         category: 'Burgueurs',
-        price: 12,
+        price: 12.50,
 
     },
     {
@@ -23,7 +23,16 @@ const specialsData = [
         title: 'Steak Griller',
         desc: 'Lorem ipsum dolor sit amet.',
         category: 'Viande',
-        price: 12,
+        price: 12.50,
+
+    },
+    {
+        id: 4,
+        url: 'https://media.istockphoto.com/id/895096318/photo/schnitzel-on-plate-top-view.jpg?s=612x612&w=0&k=20&c=29jm-eZz82kGErKBHasKIKKSKQ6H7j0SQok283BqF8M=',
+        title: 'Fillet de Poulet Fris a la Poile',
+        desc: 'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sed velit provident obcaecati totam ipsum nemo consequatur unde voluptas! Sit iusto officia illum nihil eum.',
+        category: 'poulets',
+        price: 12.50,
 
     },
 ]

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ProductCard from '../../components/productCard/ProductCard';
 import productsData from '../../productsData/products';
-import { useParams, NavLink } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 import './CategoryPage.css';
 
@@ -16,7 +16,7 @@ const CategoryPage = () => {
         <div className='category--page--title'>
             <div className='direction--links'>
                 <h3>
-                    <NavLink to='/menu' className='Link'>Menu</NavLink>/{slug}
+                    <Link to='/menu' className='Link'>Menu</Link>/{slug}
                 </h3>
             </div>
             <div className='category--title'>

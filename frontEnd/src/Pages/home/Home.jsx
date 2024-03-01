@@ -8,7 +8,7 @@ import imageSlide from '../../data';
 
 const Home = () => {
   return (
-    <div>
+    <div className='bg-orange-back'>
       <div>
         <Carrousel slides={imageSlide}/>
       </div>
@@ -22,8 +22,6 @@ const Home = () => {
         <HomeCatering/>
       </div>
     </div>
-
-  )
-}
-
-export default Home
+  );
+};
+export default Home;

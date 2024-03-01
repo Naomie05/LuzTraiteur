@@ -11,7 +11,7 @@ const Footer = () => {
         <div className='sb--footer--links'>
           <div className='sb--footer-links-div'>
             <Link to='Home'>
-              <img src="./img/logo.svg" alt="" />
+              <img src="./img/logo_2.jpg" alt="" />
             </Link>
             <br />
             <p>Suivez-nous sur nos reseaux sociaux!</p>

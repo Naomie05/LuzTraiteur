@@ -64,6 +64,10 @@
     
 }
 
+.navbar--heading{
+    display: none;
+}
+
 @media only screen and (max-width: 1200px){
     .btn-outline-primary{
         display: none;
@@ -85,6 +89,12 @@
         position: relative;
         justify-content: center;
         text-align: center;
+    }
+
+    .navbar--heading{
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
     }
 
 }
@@ -127,8 +137,9 @@
     .navbar--items{
         position: absolute;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content:flex-start;
         top: -50rem;
         left: 0;
         width: 100%;
@@ -143,15 +154,7 @@
         width: 100%;
         padding: 3rem 0 0.6rem;
         z-index: -100;
-    }
-
-    .navbar--items ul{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
+        text-align: justify;
     }
 
     .navbar--items li{

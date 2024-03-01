@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import productsData from '../../productsData/products';
 import { IoIosArrowBack } from "react-icons/io";
 
@@ -10,6 +10,12 @@ const FoodDetails = () => {
     const { foodName } = useParams();
 
     const thisProduct = productsData.find(prod => prod.title === foodName);
+
+    const navigate = useNavigate();
+
+    const handleAddToCart=()=>{
+        navigate('/Cart')
+    }
 
   return (
     <div className='food--details--container'>
@@ -31,8 +37,8 @@ const FoodDetails = () => {
                     <Link>
                         <button className='btn btn-secondarys'><h3>- 1 + </h3></button>
                     </Link>
-                    <Link>
-                        <button className='btn btn-primarys'><h3>AJOUTER AU PANIER | ${thisProduct.price}</h3></button>
+                    <Link to='/Cart' onClick={handleAddToCart}>
+                        <button  className='btn btn-primarys'>AJOUTER AU PANIER | ${thisProduct.price}</button>
                     </Link>
                 </div>
             </div>
