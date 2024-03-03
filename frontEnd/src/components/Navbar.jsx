@@ -72,6 +72,11 @@ export default function Navbar() {
         handleCloseUserMenu()
     }*/
 
+    const handleLogout = () => {
+        dispatch(logout());
+        handleClose();
+    }
+
 
   return (
     <div className={`w-full ${navbarFixed ? 'fixed top-0 z-50' : ''}`}>
@@ -120,7 +125,7 @@ export default function Navbar() {
                                 <span className="absolute -inset-1.5" />
                                 <span className="sr-only">Open user menu</span>
                                 {auth.user ? (
-                                    <div className="h-8 w-8 md:h-8 md:w-8 flex items-center justify-center bg-gray-300 rounded-full text-black font-semibold">
+                                    <div className="h-10 w-10 md:h-10 md:w-10 flex items-center justify-center bg-first rounded-full text-black text-xl font-semibold">
                                         {auth.user.firstName.charAt(0)}
                                     </div>
                                 ) : (
@@ -138,16 +143,66 @@ export default function Navbar() {
                             leaveTo="transform opacity-0 scale-95"
                         >
                             <Menu.Items className="absolute right-0 z-10 mt-4 w-96 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                 <div className='flex flex-col text-justify border-b-2 border-b-black my-10 bg-orange-back mt-0'>
-                                    <h3 className='text-2xl mt-10 mb-5 text-first font-semibold ml-10'>Salut,</h3>
-                                    <h1 className='text-5xl font-semibold mb-10 ml-10'>BIENVENUE</h1>
-                                </div>
-                                <div className='text-center mb-5'>
-                                    <Link to="/Login" onClick={() => setIsMenuOpen(false)}>
-                                        <button className='btn btn-primary mb-5'>Se Connecter</button>
-                                    </Link>
-                                    <h3 className='text-lg'>Vous n'avez pas de compte? <Link to="/Signup" onClick={() => setIsMenuOpen(false)} className='text-first underline'>S'inscrire</Link> </h3>
-                                </div>
+                                {auth.user ? (
+                                    <>
+                                        <Menu.Item>
+                                            <div className='flex flex-col text-justify border-b-2 border-b-black my-10 bg-orange-back mt-0'>
+                                                <h3 className='text-2xl mt-10 mb-5 text-first font-semibold ml-10'>Salut {auth.user.firstName} !!</h3>
+                                                <h1 className='text-5xl font-semibold mb-10 ml-10'>BON RETOUR </h1>
+                                            </div>
+                                        </Menu.Item>
+                                        <Menu.Item>
+                                            {({ active }) => (
+                                            <Link
+                                                to=" "
+                                                className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                                            >
+                                                Mon Profile
+                                            </Link>
+                                            )}
+                                        </Menu.Item>
+                                        <Menu.Item>
+                                            {({ active }) => (
+                                            <Link
+                                                to='/Order'
+                                                className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                                            >
+                                                Mes Commandes
+                                            </Link>
+                                            )}
+                                        </Menu.Item>
+                                        <Menu.Item as= "div">
+                                            {({ active }) => (
+                                                <button
+                                                    onClick={handleLogout}
+                                                    className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                                                >
+                                                    Se deconnecter
+                                                </button>
+                                            )}
+                                        </Menu.Item>
+                                    </>
+                                ) : (
+                                    <>
+                                        <Menu.Item>
+                                            <div className='flex flex-col text-justify border-b-2 border-b-black my-10 bg-orange-back mt-0'>
+                                                <h3 className='text-2xl mt-10 mb-5 text-first font-semibold ml-10'>Salut,</h3>
+                                                <h1 className='text-5xl font-semibold mb-10 ml-10'>BIENVENUE</h1>
+                                            </div>
+                                        </Menu.Item>
+                                        <Menu.Item>
+                                            <div className='text-center mb-5'>
+                                                <Link to="/Login" onClick={() => setIsMenuOpen(false)}>
+                                                    <button className='btn btn-primary mb-5'>Se Connecter</button>
+                                                </Link>
+                                               
+                                            </div>
+                                        </Menu.Item>
+                                        <Menu.Item>
+                                            <h3 className='text-lg'>Vous n'avez pas de compte? <Link to="/Signup" onClick={() => setIsMenuOpen(false)} className='text-first underline'>S'inscrire</Link> </h3>
+                                        </Menu.Item>
+                                    </>
+                                 )}
                                 {/*
                                 <Menu.Item>
                                     {({ active }) => (

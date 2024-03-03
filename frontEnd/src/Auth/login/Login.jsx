@@ -1,34 +1,36 @@
 import React, { useEffect } from 'react';
 import { Button, Grid, TextField } from '@mui/material';
-import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { getUser, login } from '../../State/Auth/Action';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { login } from '../../State/Auth/Action';
 
 const Login = () => {
 
     const dispatch = useDispatch();
-    const jwt = localStorage.getItem("jwt");
+    const navigate = useNavigate();
+    /*const jwt = localStorage.getItem("jwt");
     const {auth} = useSelector(store => store)
 
     useEffect(() => {
         if(jwt){
             dispatch(getUser(jwt))
         }
-    }, [jwt, auth.jwt])
+    }, [jwt, auth.jwt])*/
 
-    const handleSubmit = (event) =>{
+    const handleSubmit = async (event) =>{
         event.preventDefault()
 
         const data = new FormData(event.currentTarget);
 
-        const userData = {
+        const userData = { 
             email: data.get("email"),
             password: data.get("password")
         }
 
-        dispatch(login(userData))
+        await dispatch(login(userData));
+        navigate('/');
 
-        console.log("userData ", userData)
+        //console.log("userData ", userData)
 
     }
 

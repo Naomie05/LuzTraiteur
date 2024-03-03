@@ -9,7 +9,7 @@ const registerFailure = (error) => ({type: REGISTER_FAILURE, payload:error});
 
 export const register = (userData) => async (dispatch) =>{
 
-    dispatch(registerRequest())
+    dispatch(registerRequest()) 
 
     try {
         const response = await axios.post(`${API_BASE_URL}/auth/signup`, userData)
